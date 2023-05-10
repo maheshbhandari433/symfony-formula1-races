@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Race Information</h1>
+    <ul>
+        {% for race in races['MRData']['RaceTable']['Races'] %}
+            <li>{{ race['raceName'] }} - {{ race['Circuit']['circuitName'] }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
